@@ -1,0 +1,14 @@
+.Home{
+}
+
+.Home-user{
+    color: white;
+    text-align: right;
+    alignment-baseline: bottom;
+}
+
+.Home-logo {
+    background-color: #111129;
+    color: white;
+    font-family: "Balsamiq Sans", serif;
+}
