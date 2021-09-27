@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import {AppContainer} from "./CuadroLoginUsuario/appContainer";
-import {Button, DatePicker, Form, InputNumber, Radio, Select} from "antd";
+import {Button, DatePicker, Form, Image, InputNumber, Radio, Select} from "antd";
 import 'antd/dist/antd.css'
 import {Option} from "antd/es/mentions";
 import moment from "moment";
 import viaje1 from "./img/Cartagena.jpg"
+import viaje2 from "./img/San Andrés.png"
 
 const { RangePicker } = DatePicker;
 
@@ -22,12 +23,12 @@ const Contain1 = styled.div`
 
 const ViajeFoto = styled.img`
   width: auto;
-  height: 400px;
+  height: 200px;
   display: flex;
   flex-direction: column;
-  margin: 20px;
   background: transparent;
   position: relative;
+  float: left;
   z-index: 10;
 `;
 
@@ -44,7 +45,6 @@ export default function Home(){
         <div>
             <AppContainer style = {{paddingTop: 150}}>
                 <Contain1 style={{paddingLeft: 15, fontFamily: "Balsamiq Sans", paddingBottom: 15}}>
-                    <Form name="basic">
                         <div>
                             <br/>
                             <Radio.Group onChange={onChange} value = {value} >
@@ -54,7 +54,6 @@ export default function Home(){
                         </div>
                         <div>
                             <br />
-                            <Form.Item rules={[{required: true}]}>
                                 Where are you flying?
                             <Select placeholder="From"
                                     style={{ width: 210, paddingLeft: 25,}}>
@@ -72,34 +71,45 @@ export default function Home(){
                                 <Option value="San Andres" style={{fontFamily:"Balsamiq Sans"}}>San Andres</Option>
                                 <Option value="Santa Marta" style={{fontFamily:"Balsamiq Sans"}}>Santa Marta</Option>
                             </Select>
-                            </Form.Item>
                         </div>
                         <div>
-                            <Form.Item rules={[{required: true}]}>
+                            <br />
                                 Who is traveling?ㅤㅤㅤㅤ
                             <InputNumber min={1} max={20} defaultValue={1}/>
-                            </Form.Item>
                         </div>
                         <div>
-                            <Form.Item rules={[{required: true}]}>
+                            <br />
                                 When are you flying?ㅤㅤ
                             {value === 1 ? <DatePicker disabledDate={disabledDate}/>:<RangePicker
                                 disabledDate={disabledDate} format={"YYYY-MM-DD"}/>}
-                            </Form.Item>
-                            <Form.Item>
-                                ㅤㅤ<Button type="primary">
+                                ㅤㅤ<Button type="primary" href="/Help">
                                     Search
                                 </Button>
-                            </Form.Item>
                         </div>
-                    </Form>
                 </Contain1>
                 <br /><br />
                 <Contain1>
                     <div>
                         <ViajeFoto src={viaje1}/>
+                        <div style={{ fontFamily: "Balsamiq Sans", paddingLeft: 330, fontSize: 35 }}>
+                            <br />
+                            Cali → Cartagena<br />
+                            One way from 99$
+                        </div>
                     </div>
                 </Contain1>
+                <br/><br/>
+                <Contain1>
+                    <div>
+                        <ViajeFoto src={viaje2}/>
+                        <div style={{ fontFamily: "Balsamiq Sans", paddingLeft: 300, fontSize: 35 }}>
+                            <br />
+                            Bogota → San Andres Island<br />
+                            One way from 109$
+                        </div>
+                    </div>
+                </Contain1>
+                <br/><br/>
             </AppContainer>
         </div>
     );
