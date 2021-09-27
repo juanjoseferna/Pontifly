@@ -1,0 +1,18 @@
+.Home-Fondo {
+    color: black;
+    font-family: "Balsamiq Sans", serif;
+    text-align: center;
+    align-items: center;
+    position: center;
+}
+
+.Home-cuadro{
+    height: 100px;
+    width: 400px;
+    background: white;
+    position: center;
+}
+
+body{
+    font-family: "Balsamiq Sans", serif;
+}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Logo from "./logoPagTransparente.png"
 import {LoginForm} from "./loginForm";
 import {Marginer} from "../marginer";
-import {useState} from "react";
+import React, {useState} from "react";
 import {AccountContex} from "./accountContex";
 import {SingupForm} from "./singupForm";
 
@@ -90,6 +90,7 @@ export function BoxAccount(props){
 
     return(
         <AccountContex.Provider value={contextValue}>
+            <br />
         <LoginContainer>
         <TopContainer>
             <BackDrop/>

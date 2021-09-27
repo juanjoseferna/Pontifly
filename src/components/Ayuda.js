@@ -3,7 +3,7 @@ import './Ayuda.css'
 import {DatePicker , Button} from 'antd';
 import 'antd/dist/antd.css'
 
-export default function Ayuda() {
+function Ayuda() {
     return (
         <div className= "Ayuda">
             <br/><br/><br/>
@@ -20,3 +20,5 @@ export default function Ayuda() {
 
     );
 }
+
+export default Ayuda;

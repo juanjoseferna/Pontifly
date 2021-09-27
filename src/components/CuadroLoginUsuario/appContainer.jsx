@@ -5,8 +5,7 @@ export const AppContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center; 
   position: absolute;
   background-image: linear-gradient( 135deg, #3C8CE7 10%, #00EAFF 100%)
 `;
