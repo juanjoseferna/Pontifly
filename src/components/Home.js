@@ -82,7 +82,7 @@ export default function Home(){
                                 When are you flying?ㅤㅤ
                             {value === 1 ? <DatePicker disabledDate={disabledDate}/>:<RangePicker
                                 disabledDate={disabledDate} format={"YYYY-MM-DD"}/>}
-                                ㅤㅤ<Button type="primary" href="/Help">
+                                ㅤㅤ<Button type="primary" href="/Flight/Seats">
                                     Search
                                 </Button>
                         </div>
