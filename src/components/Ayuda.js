@@ -1,6 +1,6 @@
 import React from "react";
 import './Ayuda.css'
-import {DatePicker , Button} from 'antd';
+import {Button} from 'antd';
 import 'antd/dist/antd.css'
 
 function Ayuda() {

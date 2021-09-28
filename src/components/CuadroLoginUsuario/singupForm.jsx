@@ -17,12 +17,10 @@ export function SingupForm(props){
             <Input type="email" placeholder="Confirm Password"/>
         </FormContainer>
         <Marginer direction="vertical" margin={15}/>
-        <MutedLink href="#">Forget your password?</MutedLink>
-        <Marginer direction="vertical" margin={10}/>
         <SubmitBottom type="submit">Enter</SubmitBottom>
         <Marginer direction="vertical" margin={10}/>
         <MutedLink>
-            Already have an account? <BoldLink href="#" onClick={switchToSingin}>Enter</BoldLink>
+            Already have an account? <BoldLink href="#" onClick={switchToSingin}>Login</BoldLink>
         </MutedLink>
     </BoxContainer>
 }

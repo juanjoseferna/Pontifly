@@ -4,6 +4,7 @@ import {AppContainer} from "./CuadroLoginUsuario/appContainer";
 import Asientos from './img/Asientos.png'
 import {Option} from "antd/es/mentions";
 import {Button, InputNumber, Select} from "antd";
+import {Marginer} from "./marginer";
 
 
 const Contain1 = styled.div`
@@ -54,8 +55,13 @@ export default function Seats({pasajeros = 1}){
                             <div style={{paddingLeft: 25}}>
                                 <InputNumber min={1} max={29} placeholder="Row" style={{ width: 210}}/>
                                 <br/><br/><br/>
-                                <Button type="delfault" size="large" href="/Flights/Payment">
+                                <Button type="delfault" size="large" href="/Flight/Payment">
                                     Go Payment
+                                </Button>
+                                <br/>
+                                <Marginer direction="vertical" margin={15}/>
+                                <Button type="delfault" size="large" href="/">
+                                    Cancel
                                 </Button>
                             </div>
                         </div>

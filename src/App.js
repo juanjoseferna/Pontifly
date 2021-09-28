@@ -8,6 +8,8 @@ import Offers from "./components/Offers";
 import Seats from "./components/Seats";
 import {BoxAccount} from "./components/CuadroLoginUsuario";
 import {AppContainer} from "./components/CuadroLoginUsuario/appContainer";
+import {BoxPagos} from "./components/SistemaPagos";
+import {Marginer} from "./components/marginer";
 
 const App = () =>{
     return (
@@ -33,7 +35,10 @@ const App = () =>{
                         <Seats/>
                     </Route>
                     <Route exact path = '/Flight/Payment'>
-                        {/*TODO meter function payment*/}
+                        <AppContainer>
+                            <Marginer direction="vertical" margin={140}/>
+                            <BoxPagos/>
+                        </AppContainer>
                     </Route>
                 </Switch>
             </div>

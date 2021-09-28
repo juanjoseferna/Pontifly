@@ -1,5 +1,5 @@
 import React from 'react'
-import {DatePicker , Button} from 'antd';
+import {Button} from 'antd';
 import { UserOutlined, HomeOutlined, QuestionCircleOutlined, PercentageOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css'
 import logo from './img/logo.png'

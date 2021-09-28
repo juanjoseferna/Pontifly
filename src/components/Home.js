@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {AppContainer} from "./CuadroLoginUsuario/appContainer";
-import {Button, DatePicker, Form, Image, InputNumber, Radio, Select} from "antd";
+import {Button, DatePicker, InputNumber, Radio, Select} from "antd";
 import 'antd/dist/antd.css'
 import {Option} from "antd/es/mentions";
 import moment from "moment";
