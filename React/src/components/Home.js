@@ -37,22 +37,12 @@ let destino;
 let origen;
 let fecha1;
 let fecha2;
-<<<<<<< HEAD:React/src/components/Home.js
-var buscar1 = 0;
-=======
->>>>>>> f205f0a0dfd19ae0e611fb7f03dcb3bfd762621d:src/components/Home.js
 let vueloABuscar = new vuelo();
 
 function disabledDate(current){
     return current && current < moment().endOf('day');
 }
 
-<<<<<<< HEAD:React/src/components/Home.js
-function buscar2(){
-    return
-}
-=======
->>>>>>> f205f0a0dfd19ae0e611fb7f03dcb3bfd762621d:src/components/Home.js
 
 export default function Home(){
     const [value, setValue] = React.useState(1);
@@ -65,11 +55,7 @@ export default function Home(){
     }
     const seleccionarOrigen = (e) =>{
         origen = e;
-<<<<<<< HEAD:React/src/components/Home.js
-        console.log(origen.toString());
-=======
         console.log(origen);
->>>>>>> f205f0a0dfd19ae0e611fb7f03dcb3bfd762621d:src/components/Home.js
     }
     const seleccionarFecha = (e) =>{
         fecha1 = (e.format("DD-MM-YYYY"));
@@ -87,10 +73,6 @@ export default function Home(){
     const buscar = () => {
         console.log(fecha1)
         vueloABuscar = new vuelo(fecha1,destino,origen)
-<<<<<<< HEAD:React/src/components/Home.js
-        buscar1 = 1
-=======
->>>>>>> f205f0a0dfd19ae0e611fb7f03dcb3bfd762621d:src/components/Home.js
         if (value===2)
             vueloABuscar.setFecha2(fecha2)
     }
@@ -139,12 +121,7 @@ export default function Home(){
                                             <RangePicker onChange = {seleccionarFecha2}
                                              disabledDate={disabledDate}
                                              format={"DD/MM/YYYY"}  />}
-<<<<<<< HEAD:React/src/components/Home.js
-                            {origen}
-                            <Button type="primary" onClick={buscar} href={'/Flights' + origen.toString()}>
-=======
                             <Button type="primary" onClick={buscar} href={'/Flight/Seats'}>
->>>>>>> f205f0a0dfd19ae0e611fb7f03dcb3bfd762621d:src/components/Home.js
                                 Search
                             </Button>
                         </div>
