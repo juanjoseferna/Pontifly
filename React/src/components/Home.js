@@ -7,6 +7,7 @@ import {Option} from "antd/es/mentions";
 import moment from "moment";
 import viaje1 from "./img/Cartagena.jpg"
 import viaje2 from "./img/San Andrés.png"
+import vuelo from "./claseGlobal";
 
 const { RangePicker } = DatePicker;
 
@@ -32,8 +33,19 @@ const ViajeFoto = styled.img`
   z-index: 10;
 `;
 
+let destino;
+let origen;
+let fecha1;
+let fecha2;
+var buscar1 = 0;
+let vueloABuscar = new vuelo();
+
 function disabledDate(current){
     return current && current < moment().endOf('day');
+}
+
+function buscar2(){
+    return
 }
 
 export default function Home(){
@@ -41,6 +53,34 @@ export default function Home(){
     const onChange = e => {
         setValue(e.target.value);
     };
+    const seleccionarDestino = (e) =>{
+        destino = e;
+        console.log(destino);
+    }
+    const seleccionarOrigen = (e) =>{
+        origen = e;
+        console.log(origen.toString());
+    }
+    const seleccionarFecha = (e) =>{
+        fecha1 = (e.format("DD-MM-YYYY"));
+        console.log(fecha1);
+    }
+    const seleccionarFecha2 = (e) =>{
+        try {
+            fecha1 = (e[0].format("DD-MM-YYYY"));
+            fecha2 = (e[1].format("DD-MM-YYYY"));
+            console.log(fecha1, fecha2);
+        } catch (error){
+            console.log("NULL")
+        }
+    }
+    const buscar = () => {
+        console.log(fecha1)
+        vueloABuscar = new vuelo(fecha1,destino,origen)
+        buscar1 = 1
+        if (value===2)
+            vueloABuscar.setFecha2(fecha2)
+    }
     return(
         <div>
             <AppContainer style = {{paddingTop: 150}}>
@@ -55,7 +95,7 @@ export default function Home(){
                         <div>
                             <br />
                                 Where are you flying?
-                            <Select placeholder="From"
+                            <Select placeholder="From"  onSelect={seleccionarOrigen} ref={origen}
                                     style={{ width: 210, paddingLeft: 25,}}>
                                 <Option value="Bogota" style={{fontFamily:"Balsamiq Sans"}}>Bogota</Option>
                                 <Option value="Cartagena" style={{fontFamily:"Balsamiq Sans"}}>Cartagena</Option>
@@ -63,7 +103,7 @@ export default function Home(){
                                 <Option value="San Andres" style={{fontFamily:"Balsamiq Sans"}}>San Andres</Option>
                                 <Option value="Santa Marta" style={{fontFamily:"Balsamiq Sans"}}>Santa Marta</Option>
                             </Select>
-                            <Select placeholder="To"
+                            <Select placeholder="To" onSelect={seleccionarDestino} ref={destino}
                                     style={{ width: 210, paddingLeft: 25,}}>
                                 <Option value="Bogota" style={{fontFamily:"Balsamiq Sans"}}>Bogota</Option>
                                 <Option value="Cartagena" style={{fontFamily:"Balsamiq Sans"}}>Cartagena</Option>
@@ -80,37 +120,22 @@ export default function Home(){
                         <div>
                             <br />
                                 When are you flying?ㅤㅤ
-                            {value === 1 ? <DatePicker disabledDate={disabledDate}/>:<RangePicker
-                                disabledDate={disabledDate} format={"YYYY-MM-DD"}/>}
-                                ㅤㅤ<Button type="primary" href="/Flight/Seats">
-                                    Search
-                                </Button>
+                            {value === 1 ? <DatePicker onSelect = {seleccionarFecha}
+                                                       disabledDate={disabledDate}
+                                                       format={"DD/MM/YYYY"}/>:
+                                            <RangePicker onChange = {seleccionarFecha2}
+                                             disabledDate={disabledDate}
+                                             format={"DD/MM/YYYY"}  />}
+                            {origen}
+                            <Button type="primary" onClick={buscar} href={'/Flights' + origen.toString()}>
+                                Search
+                            </Button>
                         </div>
-                </Contain1>
-                <br /><br />
-                <Contain1>
-                    <div>
-                        <ViajeFoto src={viaje1}/>
-                        <div style={{ fontFamily: "Balsamiq Sans", paddingLeft: 330, fontSize: 35 }}>
-                            <br />
-                            Cali → Cartagena<br />
-                            One way from 99$
-                        </div>
-                    </div>
-                </Contain1>
-                <br/><br/>
-                <Contain1>
-                    <div>
-                        <ViajeFoto src={viaje2}/>
-                        <div style={{ fontFamily: "Balsamiq Sans", paddingLeft: 300, fontSize: 35 }}>
-                            <br />
-                            Bogota → San Andres Island<br />
-                            One way from 109$
-                        </div>
-                    </div>
                 </Contain1>
                 <br/><br/>
             </AppContainer>
         </div>
     );
 }
+
+export {vueloABuscar};

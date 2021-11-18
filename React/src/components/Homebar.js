@@ -9,7 +9,7 @@ import {Link} from "react-router-dom";
 function HomeBar(){
     return(
         <div className= 'Home-logo'>
-            <Link to={'/'}><img src={logo} alt="logo" width={100}/> </Link>
+            <Link to={'/'}><img src={logo} alt="logo" width={80}/> </Link>
             <Button type = "text" href='/' style={{ color: 'white' }} size = 'small'> Home <HomeOutlined /> </Button>
             <Button type = "text" href='/Help' style={{ color: 'white' }} size = 'small'> Help <QuestionCircleOutlined/> </Button>
             <Button type = "text" href='/Offers' style ={{color: 'white'}} size = 'small'> Offers <PercentageOutlined /> </Button>

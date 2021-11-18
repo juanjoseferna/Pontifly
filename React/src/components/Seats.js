@@ -36,6 +36,7 @@ export default function Seats({pasajeros = 1}){
             <AppContainer style={{paddingTop:150}}>
                 <Contain1 style={{paddingLeft: 15, paddingTop:15, fontFamily: "Balsamiq Sans", paddingBottom: 15}}>
                     <div>
+                        
                         <Foto src={Asientos}/>
                         <div style={{ fontFamily: "Balsamiq Sans", paddingLeft: 220, fontSize: 20}}>
                             {/*{for(let step = 0; step < pasajeros; step++)}*/}
