@@ -30,10 +30,11 @@ export default function Offers(){
     return(
         <div>
             <AppContainer style={{paddingTop:150}}>
-
                 <Contain1>
                     <div>
-                        <ViajeFoto src={viaje1}/>
+                        <a href={'/Flight/Seats'}>
+                            <ViajeFoto src={viaje1} href={'/Flight/Seats'}/>
+                        </a>
                         <div style={{ fontFamily: "Balsamiq Sans", paddingLeft: 330, fontSize: 35 }}>
                             <br />
                             Cali → Cartagena<br />
@@ -44,7 +45,9 @@ export default function Offers(){
                 <br/><br/>
                 <Contain1>
                     <div>
-                        <ViajeFoto src={viaje2}/>
+                        <a href={'/Flight/Seats'}>
+                            <ViajeFoto src={viaje2}/>
+                        </a>
                         <div style={{ fontFamily: "Balsamiq Sans", paddingLeft: 330, fontSize: 35 }}>
                             <br />
                             Bogota → San Andres Island<br />

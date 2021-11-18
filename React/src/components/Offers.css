@@ -1,0 +1,10 @@
+.Offers{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    position: relative;
+    float: left;
+    z-index: 10;
+}
