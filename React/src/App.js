@@ -38,11 +38,11 @@ const App = () =>{
                     </Route>
                     <Route exact path = '/Flight/Payment'>
                         <AppContainer>
-                            <Marginer direction="vertical" margin={140}/>
+                            <Marginer direction="vertical" margin={20}/>
                             <BoxPagos/>
                         </AppContainer>
                     </Route>
-                    <Route exact path = '/Flights/:origen/:destino/:fecha1/:fecha2'>
+                    <Route exact path = '/Flights'>
                         <Flights/>
                     </Route>
                 </Switch>

@@ -1,7 +1,7 @@
-import React, {useContext} from "react";
-import {BoldLink, BoxContainer, FormContainer, Input, MutedLink, SubmitBottom} from "./common";
+import React, { useContext, useEffect, useState } from "react";
+import { BoldLink, BoxContainer, FormContainer, Input, MutedLink, SubmitBottom } from "./common";
 import { Marginer } from "../marginer";
-import {AccountContex} from "./accountContex";
+import { AccountContex } from "./accountContex";
 
 export function LoginForm(props){
 

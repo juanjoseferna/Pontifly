@@ -83,7 +83,6 @@ const ContenedorBotones = styled.div`
 `;
 
 export function BoxPagos(props){
-
     return(
         <ContenedorDatos>
             <TopContainer>

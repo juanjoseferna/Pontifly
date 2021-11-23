@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {AppContainer} from "./CuadroLoginUsuario/appContainer";
 import viaje1 from "./img/Cartagena.jpg";
 import viaje2 from "./img/San Andrés.png";
+import {PercentageOutlined} from "@ant-design/icons";
 
 const Contain1 = styled.div`
   width: 1280px;
@@ -29,7 +30,8 @@ const ViajeFoto = styled.img`
 export default function Offers(){
     return(
         <div>
-            <AppContainer style={{paddingTop:150}}>
+            <AppContainer style={{paddingTop:30}}>
+                <h1 style={{ fontFamily: "Balsamiq Sans", fontSize: 75 }}> Offers <PercentageOutlined /></h1>
                 <Contain1>
                     <div>
                         <a href={'/Flight/Seats'}>
